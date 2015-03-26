@@ -11,7 +11,7 @@ describe('Cookie:', function() {
     cookie.options.raw = false;
 
     var data = cookie.get('mock');
-    expect(data).to.eql(null);
+    expect(data).to.eql(undefined);
     done();
   });
 

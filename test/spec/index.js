@@ -1,7 +1,8 @@
 module.exports = [
   require('./options'),
-  require('./string'),
+  require('./set'),
   require('./get'),
+  require('./string'),
   require('./json'),
   require('./raw'),
   require('./converter'),

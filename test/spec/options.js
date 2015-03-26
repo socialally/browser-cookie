@@ -2,9 +2,10 @@ var Cookie = require('cookie')
   , expect = require('chai').expect;
 
 describe('Cookie:', function() {
-  var cookie = new Cookie();
 
-  it('should verify default cookie options', function(done) {
+  it('should have default cookie options', function(done) {
+    var cookie = new Cookie();
+
     function assert(options) {
       expect(options).to.be.an('object');
       expect(options).to.have.property('expires')
@@ -17,23 +18,19 @@ describe('Cookie:', function() {
       expect(options.raw).to.be.undefined;
       expect(options.json).to.be.undefined;
     }
-
     assert(cookie.options);
     done();
   });
 
-  it('should set/get cookie value', function(done) {
-    var value = cookie.set("visitor", "visitor-id");
-    var received = cookie.get("visitor");
-    expect(received).to.be.a('string').that.equals("visitor-id");
-    done();
-  });
+  it('should have cookie options with secure', function(done) {
+    var cookie = new Cookie({secure: true});
 
-  it('should set/delete/get null cookie value', function(done) {
-    var value = cookie.set("visitor", "new-visitor-id");
-    cookie.del("visitor", {path: '/'});
-    var received = cookie.get("visitor");
-    expect(received).to.be.null;
+    function assert(options) {
+      expect(options).to.be.an('object');
+      expect(options).to.have.property('secure')
+        .to.be.a('boolean').that.equals(true);
+    }
+    assert(cookie.options);
     done();
   });
 

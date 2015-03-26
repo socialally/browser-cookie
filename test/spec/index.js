@@ -1,1 +1,6 @@
-module.exports = require('./cookie');
+module.exports = [
+  require('./options'),
+  require('./set-get'),
+  require('./del'),
+  require('./clear'),
+]

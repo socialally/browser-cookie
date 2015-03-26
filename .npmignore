@@ -3,6 +3,9 @@
 /package
 /instrument
 /build
+/doc/readme
+/gulpfile.*
+/gulp
 /test/spec.js
 *.js.map
 *.log

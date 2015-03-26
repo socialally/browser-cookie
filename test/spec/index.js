@@ -1,6 +1,7 @@
 module.exports = [
   require('./options'),
-  require('./set-get'),
+  require('./string'),
+  require('./json'),
   require('./del'),
   require('./clear'),
 ]

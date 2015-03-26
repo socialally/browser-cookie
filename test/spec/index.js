@@ -5,6 +5,7 @@ module.exports = [
   require('./raw'),
   require('./converter'),
   require('./quoted'),
+  require('./decode'),
   require('./del'),
   require('./clear'),
 ]

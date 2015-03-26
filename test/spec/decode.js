@@ -3,15 +3,15 @@ var Cookie = require('cookie')
 
 describe('Cookie:', function() {
 
-  it('should set/get cookie quoted string value', function(done) {
+  it('should return null on bad decode', function(done) {
     var cookie = new Cookie({raw: true});
-    cookie.set('mock', '"mock-quote"');
+    cookie.set('mock', '%%');
 
-    // disable raw to test code path
+    // disable raw to mock error condition
     cookie.options.raw = false;
 
     var data = cookie.get('mock');
-    expect(data).to.eql('mock-quote');
+    expect(data).to.eql(null);
     done();
   });
 

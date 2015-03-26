@@ -5,9 +5,9 @@ describe('Cookie:', function() {
 
   it('should set/get cookie string value', function(done) {
     var cookie = new Cookie();
-    var value = cookie.set('visitor', 'visitor-id');
-    var received = cookie.get('visitor');
-    expect(received).to.be.a('string').that.equals('visitor-id');
+    var value = cookie.set('mock', 'mock-id');
+    var received = cookie.get('mock');
+    expect(received).to.be.a('string').that.equals('mock-id');
     done();
   });
 

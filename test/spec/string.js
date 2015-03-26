@@ -11,4 +11,13 @@ describe('Cookie:', function() {
     done();
   });
 
+  it('should set/get cookie undefined value', function(done) {
+    var cookie = new Cookie();
+    var value = cookie.set('mock-foo', undefined);
+    expect(value).to.eql(undefined);
+    var data = cookie.get('mock-foo');
+    expect(data).to.eql(undefined);
+    done();
+  });
+
 });

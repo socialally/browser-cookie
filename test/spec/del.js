@@ -7,16 +7,16 @@ describe('Cookie:', function() {
   it('should delete cookie value', function(done) {
     var value = cookie.set('visitor', 'new-visitor-id');
     cookie.del('visitor');
-    var received = cookie.get('visitor');
-    expect(received).to.be.null;
+    var data = cookie.get('visitor');
+    expect(data).to.eql(undefined);
     done();
   });
 
   it('should delete cookie value w/options', function(done) {
     var value = cookie.set('visitor', 'new-visitor-id');
     cookie.del('visitor', {path: '/'});
-    var received = cookie.get('visitor');
-    expect(received).to.be.null;
+    var data = cookie.get('visitor');
+    expect(data).to.eql(undefined);
     done();
   });
 

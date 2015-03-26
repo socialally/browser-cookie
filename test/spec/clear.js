@@ -8,8 +8,8 @@ describe('Cookie:', function() {
     cookie.set('mock1', 'mock-value-1');
     cookie.set('mock2', 'mock-value-2');
     cookie.clear();
-    expect(cookie.get('mock1')).to.eql(null);
-    expect(cookie.get('mock2')).to.eql(null);
+    expect(cookie.get('mock1')).to.eql(undefined);
+    expect(cookie.get('mock2')).to.eql(undefined);
     done();
   });
 
@@ -18,7 +18,7 @@ describe('Cookie:', function() {
     cookie.set('mock1', 'mock-value-1');
     cookie.set('mock2', 'mock-value-2');
     cookie.clear(['mock2']);
-    expect(cookie.get('mock1')).to.eql(null);
+    expect(cookie.get('mock1')).to.eql(undefined);
     expect(cookie.get('mock2')).to.eql('mock-value-2');
     done();
   });

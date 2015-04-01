@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git://github.com/socialally/browser-cookie.git"
   },
-  "dependencies": {},
+  "main": "lib/cookie.js",
   "devDependencies": {
     "brfs": "~1.4.0",
     "browser-sync": "~2.4.0",
@@ -61,6 +61,7 @@
         "inc": [
           "introduction.md",
           "install.md",
+          "api.md",
           "developer.md",
           "license.md"
         ]

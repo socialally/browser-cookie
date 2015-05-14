@@ -19,8 +19,6 @@ var config = {
     './instrument',
     './coverage',
     './test/spec.*',
-    './dist/*.js',
-    './dist/*.js.map',
   ],
   spec: {
     main: './test/spec/index.js',
@@ -36,15 +34,6 @@ var config = {
     map: './',
     dest: './test',
     source: 'spec.js'
-  },
-  dist: {
-    global: {
-      main: './gulp/build/global.js',
-      paths: ['./lib'],
-      map: false,
-      dest: './dist',
-      source: 'air.global.js'
-    }
   },
   lint: {
     src: ['./lib/**/*.js'],

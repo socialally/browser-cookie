@@ -46,7 +46,7 @@
     "instrument": "istanbul instrument --output instrument lib/",
     "cover": "npm run instrument && gulp cover",
     "test": "gulp test",
-    "prepublish": "mkdir -p dist && browserify $npm_package_main --standalone Cookie --outfile dist/cookie.js"
+    "prepublish": "browserify $npm_package_main -s Cookie -o cookie.js"
   },
   "mdp": {
     "title": "Cookie",

@@ -30,9 +30,6 @@
     "vinyl-buffer": "~1.0.0",
     "vinyl-source-stream": "~1.1.0"
   },
-  "engine": [
-    "node >= 0.10.11"
-  ],
   "scripts": {
     "docs": "npm run readme",
     "readme": "mdp --force -v",

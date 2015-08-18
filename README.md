@@ -24,6 +24,8 @@ Table of Contents
 Cookie
 ======
 
+> `Stability: stable`.
+
 Standalone cookie implementation for the browser designed to work with [browserify](http://browserify.org).
 
 Derived from the [jquery cookie plugin](https://github.com/carhartl/jquery-cookie).

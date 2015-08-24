@@ -1,7 +1,7 @@
 {
   "name": "browser-cookie",
   "description": "Standalone cookie class for the browser",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "stability": "stable",
   "author": "muji <noop@xpm.io>",
   "repository": {
